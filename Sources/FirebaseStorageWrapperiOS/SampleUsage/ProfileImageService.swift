@@ -7,15 +7,14 @@
 
 import Foundation
 import SwiftUI
+import FirebaseStorageWrapperiOS
 
 class ProfileImageService {
     
     private let storage: FirebaseStorageWrapper
-    //private let folderPath: String
     private let baseURL: String
     
-    init() { //maxFileSize: Int64, folderPath: String
-        //self.folderPath = folderPath
+    init() {
         self.baseURL = "ProfileImages/"
         self.storage = FirebaseStorageWrapper(maxFileSize: 30 * 1024 * 1024)
     }
